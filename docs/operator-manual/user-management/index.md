@@ -160,6 +160,7 @@ kubectl edit configmap argocd-cm -n argocd
 * You will very likely want to restrict logins to one or more GitHub organization. In the
   `connectors.config.orgs` list, add one or more GitHub organizations. Any member of the org will
   then be able to login to Argo CD to perform management tasks.
+* Note: Dex will not populate the groups scope with the GitHub connector unless the user is both part of an organization and part of a team in that organization.
 
 ```yaml
 data:
